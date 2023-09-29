@@ -1,23 +1,34 @@
 import React, { Component } from "react";
 import "../Assets/css/Projects.css";
 import ProjectsCard from "./ProjectsCard";
+
 function Projects() {
   const ProjectDetails = [
     {
-      "id" : 1,
-      "img" : "work-1.jpg",
-      "title": "Automatic Number Plate Recognition",
-      "tectStack" : ["Python", "OpenCv"],
+      id: 1,
+      img: "./imgs/anpr.png",
+      title: "Automatic Number Plate Recognition",
+      tectStack: ['Python', 'Image Processing', 'OpenCV', 'Tkinter', 'Excel'],
     },
     {
-      "id" : 2,
-      "img" : "work-2.jpg",
-      "title" : "DWiz",
-      "tectStack" : ["R", "Css", "Cloud"],
+      id: 2,
+      img: "./imgs/dwiz.png",
+      title: "DWiz",
+      tectStack: ['R', 'Ggplot', 'Tidyverse', 'ShinyR', 'CSS', 'Bootstrap', 'Shinyapps Cloud'],
+    },
+    {
+      id: 3,
+      img: "./imgs/icudp.png",
+      title: "Image Captioning using Deep Learning",
+      tectStack: ['Python', 'Keras', 'Tensorflow', 'Pillow', 'Deep Learning models'],
+    },
+    {
+      id: 4,
+      img: "./imgs/cmp.png",
+      title: "College Management Portal",
+      tectStack: ['Python', 'Django', 'MySQL', 'CSS', 'Bootstrap'],
     },
   ];
- // const data = JSON.parse(ProjectDetails);
-  //console.log(data);
 
   return (
     <>
@@ -28,16 +39,21 @@ function Projects() {
               <div class="title-box text-center">
                 <h3 class="title-a">Projects</h3>
                 <p class="subtitle-a">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  
                 </p>
                 <div class="line-mf"></div>
               </div>
             </div>
           </div>
           <div class="row">
-              {ProjectDetails.map((ele)=>(
-                  <ProjectsCard key={ele.id} img={ele.img} title={ele.title} tech={ele.tectStack}/>
-              ))}
+            {ProjectDetails.map((ele) => (
+              <ProjectsCard
+                key={ele.id}
+                img={ele.img}
+                title={ele.title}
+                tech={ele.tectStack}
+              />
+            ))}
           </div>
         </div>
       </section>
