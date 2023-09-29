@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 function ProjectsCard(props) {
   const img = props.img;
   const title = props.title;
@@ -27,10 +28,10 @@ function ProjectsCard(props) {
               </div>
               <div class="col-sm-2">
                 <div class="w-like">
-                  <a href="portfolio-details.html">
+                  <Link to='/projects'>
                     {" "}
                     <span class="bi bi-plus-circle"></span>
-                  </a>
+                    </Link>
                 </div>
               </div>
             </div>

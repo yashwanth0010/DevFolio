@@ -2,15 +2,31 @@ import './App.css';
 import Contact from './Components/Contact';
 import Header from './Components/Header';
 import Hero from './Components/Hero';
+import ProjectDetails from './Components/ProjectDetails';
 import Projects from './Components/Projects';
+import Error404 from './Components/Error';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header/>
-      <Hero/>
-      <Projects/>
-      <Contact/>
+    <BrowserRouter>
+    
+    <Routes>
+    <Route path="/" element=
+        {  <>   
+          <Header/>
+          <Hero/>
+          <Projects/>
+          <Contact/>
+          </> 
+          } 
+          />
+        <Route path="projects" element={<ProjectDetails />} />
+        <Route path="*" element={<Error404/>} />
+
+      </Routes>
+      </BrowserRouter>
     </>
   );
 }
