@@ -9,7 +9,7 @@ function Contact() {
 
     const form = document.getElementsByTagName("form");
 
-    emailjs.sendForm('service_pe27nlq', 'template_5h3j44m', form['0'], '7ZLFI05xklc_jlD5z')
+    emailjs.sendForm('service_pe27nlq', 'template_5h3j44m', form['0'], 'public key')
     .then((result) => {
         window.alert("Message Sent Successfully");
         form['0'].reset();
