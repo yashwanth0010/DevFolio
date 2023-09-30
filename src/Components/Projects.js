@@ -28,6 +28,7 @@ function Projects() {
                 img={ele.img}
                 title={ele.title}
                 tech={ele.tectStack}
+                url = {ele.url}
               />
             ))}
           </div>

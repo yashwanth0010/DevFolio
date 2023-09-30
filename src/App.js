@@ -23,7 +23,7 @@ function App() {
           </> 
           } 
           />
-        <Route path="projects" element={<ProjectDetails />} />
+        <Route path="projects/:id" element={<ProjectDetails />} />
         <Route path="*" element={<Error404/>} />
 
       </Routes>

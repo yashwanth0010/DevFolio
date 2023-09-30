@@ -1,15 +1,15 @@
 import React, { Component, useEffect } from "react";
-import overlay from "../Assets/img/overlay-bg.jpg";
+import {useParams} from "react-router-dom";
 import "../Assets/css/ProjectDetails.css";
 import { Link } from "react-router-dom";
 import PageAnimation from "./PageAnimation";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Data from "./Data";
 import "swiper/css";
 import {
   Navigation,
   Pagination,
   Scrollbar,
-  A11y,
   Autoplay,
   EffectCube,
 } from "swiper/modules";
@@ -18,7 +18,17 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-cube";
-function ProjectDetails() {
+import logo from "../Assets/img/anpr1.png";
+function ProjectDetails(props) {
+  const params = useParams();
+  console.log(params.id);
+  var data;
+  for (let index = 0; index < Data.length; index++) {
+    if (Data[index].url == params.id) {
+           data = Data[index];
+    }
+    
+  }
 
     useEffect(()=>{
       window.scrollTo(0,0);
@@ -29,19 +39,19 @@ function ProjectDetails() {
       <PageAnimation>
         <div
           class="hero hero-single route bg-image"
-          style={{ backgroundImage: `url(${overlay})` }}
+          style={{ backgroundImage: `url(${data.img})` }}
         >
           <div class="overlay-mf"></div>
           <div class="hero-content display-table">
             <div class="table-cell">
               <div class="container">
-                <h2 class="hero-title mb-4">Portfolio Details</h2>
+                <h2 class="hero-title mb-4">{data.title}</h2>
                 <ol class="breadcrumb d-flex justify-content-center">
                   <li class="breadcrumb-item">
                     <Link to="/">Home </Link>
                   </li>
                   <li class="breadcrumb-item active">
-                    Projects / Portfolio Details
+                    Projects / {data.title}
                   </li>
                 </ol>
               </div>
@@ -84,17 +94,13 @@ function ProjectDetails() {
                         disableOnInteraction: false,
                       }}
                     >
-                      <SwiperSlide>
-                        <img src="./imgs/anpr.png" alt="" effect="cards" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        {" "}
-                        <img src="./imgs/cmp.png" alt="" effect="cards" />
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        {" "}
-                        <img src="./imgs/icudp.png" alt="" />
-                      </SwiperSlide>
+
+        {data.projectImg.map((ele)=>(
+                       <SwiperSlide>
+                       <img src={ele}alt="" effect="cards" />
+                     </SwiperSlide>
+                    ))}
+
                     </Swiper>
 
                     <div class="swiper-pagination"></div>
@@ -107,33 +113,27 @@ function ProjectDetails() {
 
                 <div class="col-lg-4">
                   <div class="portfolio-info">
-                    <h3>Project information</h3>
+                    <h3>Project Information</h3>
                     <ul>
-                      <li>
-                        <strong>Category</strong>: Web design
+                    <li>
+                        <strong>Title </strong>: {data.title}
                       </li>
                       <li>
-                        <strong>Client</strong>: ASU Company
+                        <strong>Category </strong>: {data.category}
                       </li>
                       <li>
-                        <strong>Project date</strong>: 01 March, 2020
+                        <strong>TechStack </strong>: {data.tectStack.map((ele)=><span>{ele} | </span>)}
                       </li>
                       <li>
-                        <strong>Project URL</strong>:{" "}
-                        <a href="#">www.example.com</a>
+                        <strong>Github </strong>:  <a href={data.github}  target="_blank">  {data.github} <i class="bi bi-box-arrow-up-right"></i> </a>
                       </li>
                     </ul>
                   </div>
                   <div class="portfolio-description">
-                    <h2>This is an example of portfolio detail</h2>
-                    <p>
-                      Autem ipsum nam porro corporis rerum. Quis eos dolorem eos
-                      itaque inventore commodi labore quia quia. Exercitationem
-                      repudiandae officiis neque suscipit non officia eaque
-                      itaque enim. Voluptatem officia accusantium nesciunt est
-                      omnis tempora consectetur dignissimos. Sequi nulla at esse
-                      enim cum deserunt eius.
-                    </p>
+                    <h2>Project Description</h2>
+                    {data.description.map((ele)=>(
+                      <p><i class="bi bi-caret-right-fill"></i> {ele}</p>
+                    ))}
                   </div>
                 </div>
               </div>
