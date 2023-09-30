@@ -1,5 +1,6 @@
 import React, { Component,useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import PageAnimation from './PageAnimation';
 
 function Contact() {
 
@@ -21,7 +22,6 @@ function Contact() {
 
     return (  
     <>
-
     <section id="contact" className="paralax-mf footer-paralax bg-image sect-mt4 route" >
       <div className="overlay-mf"></div>
       <div className="container">
@@ -107,7 +107,6 @@ function Contact() {
         </div>
       </div>
     </section>
-
     </>);
 }
 

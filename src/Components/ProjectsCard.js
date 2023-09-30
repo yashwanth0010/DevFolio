@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import PageAnimation from "./PageAnimation";
 function ProjectsCard(props) {
   const img = props.img;
   const title = props.title;
@@ -10,6 +11,7 @@ function ProjectsCard(props) {
     
       <div class="col-md-4">
         <div class="projects-box">
+        <PageAnimation>
         <Link to='/projects'>
           <a data-gallery="portfolioGallery" class="portfolio-lightbox">
             <div class="projects-img">
@@ -31,7 +33,7 @@ function ProjectsCard(props) {
               <div class="col-sm-2">
                 <div class="w-like">
                   <Link to='/projects'>
-                    {" "}
+                    
                     <span class="bi bi-arrow-right-circle"></span>
                     </Link>
                 </div>
@@ -39,6 +41,7 @@ function ProjectsCard(props) {
             </div>
           </div>
           </Link>
+          </PageAnimation>
         </div>
       </div>
       

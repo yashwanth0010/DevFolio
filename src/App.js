@@ -6,6 +6,7 @@ import ProjectDetails from './Components/ProjectDetails';
 import Projects from './Components/Projects';
 import Error404 from './Components/Error';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PageAnimation from './Components/PageAnimation';
 
 function App() {
   return (
