@@ -34,7 +34,7 @@ function ProjectsCard(props) {
                 <div class="w-like">
                   <Link to='/projects'>
                     
-                    <span class="bi bi-arrow-right-circle"></span>
+                    <span class="bi bi-box-arrow-right"></span>
                     </Link>
                 </div>
               </div>
