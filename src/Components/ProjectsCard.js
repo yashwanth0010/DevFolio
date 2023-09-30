@@ -7,8 +7,10 @@ function ProjectsCard(props) {
 
   return (
     <>
+    
       <div class="col-md-4">
         <div class="projects-box">
+        <Link to='/projects'>
           <a data-gallery="portfolioGallery" class="portfolio-lightbox">
             <div class="projects-img">
               <img src={img} alt="" class="img-fluid" />
@@ -30,14 +32,16 @@ function ProjectsCard(props) {
                 <div class="w-like">
                   <Link to='/projects'>
                     {" "}
-                    <span class="bi bi-plus-circle"></span>
+                    <span class="bi bi-arrow-right-circle"></span>
                     </Link>
                 </div>
               </div>
             </div>
           </div>
+          </Link>
         </div>
       </div>
+      
     </>
   );
 }
