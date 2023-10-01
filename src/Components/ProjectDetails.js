@@ -19,7 +19,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-cube";
 import logo from "../Assets/img/anpr1.png";
-function ProjectDetails(props) {
+function ProjectDetails() {
   const params = useParams();
   console.log(params.id);
   var data;
@@ -39,31 +39,32 @@ function ProjectDetails(props) {
       <PageAnimation>
         <div
           class="hero hero-single route bg-image"
-          style={{ backgroundImage: `url(${data.img})` }}
+          style={{ backgroundImage: `url(${"." + data.img})` }}
         >
           <div class="overlay-mf"></div>
           <div class="hero-content display-table">
             <div class="table-cell">
               <div class="container">
-                <h2 class="hero-title mb-4">{data.title}</h2>
+                <h2 class="hero-title mb-4" style={{color:"black"}}>{data.title}</h2>
                 <ol class="breadcrumb d-flex justify-content-center">
-                  <li class="breadcrumb-item">
-                    <Link to="/">Home </Link>
+                  <b>
+                <strong>
+                  <li class="breadcrumb-item" style={{color:"black"}}>
+                    <Link to="/" style={{color:"black"}}>Home /  </Link>  Projects / {data.title}
                   </li>
-                  <li class="breadcrumb-item active">
-                    Projects / {data.title}
-                  </li>
+                  </strong>
+                  </b>
                 </ol>
               </div>
             </div>
           </div>
         </div>
 
-        <main id="mainly">
+        <main id="main">
           <section id="portfolio-details" class="portfolio-details">
             <div class="container">
               <div class="row ">
-                <div class="col-lg-8">
+                <div class="col-lg-7">
                   <div class="portfolio-details-slider swiper">
                     <Swiper
                       modules={[
@@ -111,7 +112,7 @@ function ProjectDetails(props) {
                   </Link>
                 </div>
 
-                <div class="col-lg-4">
+                <div class="col-lg-5">
                   <div class="portfolio-info">
                     <h3>Project Information</h3>
                     <ul>
@@ -125,8 +126,13 @@ function ProjectDetails(props) {
                         <strong>TechStack </strong>: {data.tectStack.map((ele)=><span>{ele} | </span>)}
                       </li>
                       <li>
-                        <strong>Github </strong>:  <a href={data.github}  target="_blank">  {data.github} <i class="bi bi-box-arrow-up-right"></i> </a>
+                        <strong>Github </strong>:  <a href={data.github}  target="_blank">  {data.github.substring(8)} <i class="bi bi-box-arrow-up-right"></i> </a>
                       </li>
+                      {
+                        data.live && <li>
+                          <strong>Live Project </strong>:  <a href={data.live}  target="_blank">  {data.live} <i class="bi bi-box-arrow-up-right"></i> </a>
+                        </li>
+                      }
                     </ul>
                   </div>
                   <div class="portfolio-description">
@@ -146,8 +152,7 @@ function ProjectDetails(props) {
               <div class="col-sm-12">
                 <div class="copyright-box">
                   <p class="copyright">
-                    &copy; Copyright <strong>DevFolio</strong>. All Rights
-                    Reserved
+                          All Rights Reserved
                   </p>
                   <div class="credits"></div>
                 </div>
