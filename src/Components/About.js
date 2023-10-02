@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import '../Assets/css/About.css';
+import resume from "../Assets/Resume.pdf";
+import { Document, Page } from 'react-pdf';
+import { useState } from 'react';
+
 function About() {
+
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber] = useState(1);
+  
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
+
     return (  
         <>
             <section id="about" class="about-mf sect-pt4 route">
@@ -25,7 +37,21 @@ function About() {
                       </div>
                     </div>
                   </div>
-                  <div class="skill-mf">
+
+              
+<div>
+      <Document
+        file={resume}
+        onLoadSuccess={onDocumentLoadSuccess}
+      >
+        <Page pageNumber={pageNumber} />
+      </Document>
+      <p>
+        Page {pageNumber} of {numPages}
+      </p>
+    </div>
+
+{     /*             <div class="skill-mf">
                     <p class="title-s">Skill</p>
                     <span>HTML</span> <span class="pull-right">85%</span>
                     <div class="progress">
@@ -43,7 +69,9 @@ function About() {
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" style={{width: "90%", ariavaluenow:"90" ,ariavaluemin:"0" ,ariavaluemax:"100"}}></div>
                     </div>
-                  </div>
+    </div>*/}
+
+    
                 </div>
                 <div class="col-md-6">
                   <div class="about-me pt-4 pt-md-0">
