@@ -5,7 +5,7 @@ import '../Assets/css/Header.css';
 function Header() {
 
 
-    const scrollToContact = (ele) =>{
+    const scrollTo = (ele) =>{
       document.getElementById(ele)?.scrollIntoView({ behavior: 'smooth' });
     }
 
@@ -19,13 +19,13 @@ function Header() {
 
       <nav id="navbar" className="navbar">
         <ul>
-            <li onClick={()=>{scrollToContact('hero')}}><a className="nav-link scrollto active">Home</a></li>
+            <li onClick={()=>{scrollTo('hero')}}><a className="nav-link scrollto active">Home</a></li>
             <li><a className="nav-link scrollto" href="#about">About</a></li>
             <li><a className="nav-link scrollto" href="#services">Services</a></li>
             <li><a className="nav-link scrollto " href="#work">Work</a></li>
             <li><a className="nav-link scrollto " href="#blog">Blog</a></li>
-            <li onClick={ ()=>{ scrollToContact('projects') }}><a className="nav-link scrollto ">Projects </a></li>
-            <li onClick={ ()=>{ scrollToContact('contact') }}><a className="nav-link scrollto" >Contact</a></li>
+            <li onClick={ ()=>{ scrollTo('projects') }}><a className="nav-link scrollto ">Projects </a></li>
+            <li onClick={ ()=>{ scrollTo('contact') }}><a className="nav-link scrollto" >Contact</a></li>
         </ul>
         <i className="bi bi-list mobile-nav-toggle"></i>
       </nav>
