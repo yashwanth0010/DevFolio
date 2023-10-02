@@ -20,7 +20,7 @@ function Header() {
       <nav id="navbar" className="navbar">
         <ul>
             <li onClick={()=>{scrollTo('hero')}}><a className="nav-link scrollto active">Home</a></li>
-            <li><a className="nav-link scrollto" href="#about">About</a></li>
+            <li onClick={()=>{scrollTo('about')}} ><a className="nav-link scrollto">About</a></li>
             <li><a className="nav-link scrollto" href="#services">Services</a></li>
             <li><a className="nav-link scrollto " href="#work">Work</a></li>
             <li><a className="nav-link scrollto " href="#blog">Blog</a></li>

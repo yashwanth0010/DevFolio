@@ -7,6 +7,7 @@ import Projects from './Components/Projects';
 import Error404 from './Components/Error';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PageAnimation from './Components/PageAnimation';
+import About from './Components/About';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         {  <>   
           <Header/>
           <Hero/>
+          <About/>
           <Projects/>
           <Contact/>
           </> 
