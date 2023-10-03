@@ -33,3 +33,51 @@
     height: 0.7rem;
     background-color: #0078ff;
   }
+
+  .resume{
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .maino{
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .Doc{
+    padding: 10px;
+    box-shadow: 10px 10px 10px 10px rgba(7, 7, 7, 0.08);
+    display: block;
+  }
+  .Doc :hover{
+    transition: all 1s;
+    cursor: pointer;
+    transform: scale(1);
+    font-size: 60px;
+    color: black;
+  }
+  
+  .overlayd {
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: opacity;
+  }
+  
+  .maino:hover .overlayd {
+    opacity: 1;
+  }
+  
+  .icond {
+    color: black;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
