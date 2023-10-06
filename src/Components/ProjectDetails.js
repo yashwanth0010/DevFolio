@@ -18,7 +18,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-cube";
-import logo from "../Assets/img/anpr1.png";
 function ProjectDetails() {
   const params = useParams();
   console.log(params.id);

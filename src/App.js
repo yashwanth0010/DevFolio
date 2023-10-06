@@ -8,6 +8,7 @@ import Error404 from './Components/Error';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PageAnimation from './Components/PageAnimation';
 import About from './Components/About';
+import Education from './Components/Education';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Header/>
           <Hero/>
           <About/>
+          <Education/>
           <Projects/>
           <Contact/>
           </> 
