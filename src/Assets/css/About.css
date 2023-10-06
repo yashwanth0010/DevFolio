@@ -64,8 +64,7 @@
     height: 100%;
     opacity: 0;
     transition: .3s ease;
-    background-color: opacity;
-  }
+    }
   
   .maino:hover .overlayd {
     opacity: 1;
