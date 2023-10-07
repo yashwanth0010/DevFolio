@@ -1,0 +1,67 @@
+.achievecard{
+    background: black;
+    display: flex;
+
+
+}
+.maincard{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 3rem;
+    border-radius: 5%;
+    width: 59%;
+    border-color: white;
+    border-style: solid;
+    border-radius: 5rem;
+    box-shadow: 10px 10px 10px 10px whitesmoke;
+}
+
+.line {
+    position: relative;
+    max-width: 80%;
+    margin: 0 0 0 10%;
+  }
+
+  .line::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: #fff;
+    top: 0;
+    bottom: 0;
+    margin-left: -3px;
+  }
+
+  .Component {
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+  }
+  .Component::after {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-color: #fff;
+    top: 18px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .right-5 {
+    padding: 0px 0px 20px 4px;
+    left: auto;
+  }
+  
+  
+  /* Fix the circle for containers on the right side */
+  .right-5::after {
+    left: -10px;
+  }
+  .p-3{
+    color: white;
+  }
+
+  .content{
+    margin-left: 7%;
+    color: rgb(207, 193, 193);
+  }

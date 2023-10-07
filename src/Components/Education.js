@@ -31,7 +31,7 @@ function Education() {
 
   return (
     <>
-      <section id="education">
+      <section id="education"  class="portfolio-mf sect-pt4 route">
         <div class="educontainer">
           <div class="title-box text-center">
             <h3 class="title-a">Education</h3>

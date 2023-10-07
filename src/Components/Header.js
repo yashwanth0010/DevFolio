@@ -6,7 +6,7 @@ function Header() {
 
 
     const scrollTo = (ele) =>{
-      document.getElementById(ele)?.scrollIntoView({ block: "nearest", behavior: 'smooth' });
+      document.getElementById(ele)?.scrollIntoView({ block: "start", behavior: 'smooth' });
     }
 
     return (  
@@ -22,9 +22,8 @@ function Header() {
             <li onClick={()=>{scrollTo('hero')}}><a className="nav-link scrollto active">Home</a></li>
             <li onClick={()=>{scrollTo('about')}} ><a className="nav-link scrollto">About</a></li>
             <li onClick={()=>{scrollTo('education')}} ><a className="nav-link scrollto">Education</a></li>
-            <li><a className="nav-link scrollto " href="#work">Work</a></li>
-            <li><a className="nav-link scrollto " href="#blog">Blog</a></li>
             <li onClick={ ()=>{ scrollTo('projects') }}><a className="nav-link scrollto ">Projects </a></li>
+            <li onClick={()=>{scrollTo('achievements')}} ><a className="nav-link scrollto">Achievements</a></li>
             <li onClick={ ()=>{ scrollTo('contact') }}><a className="nav-link scrollto" >Contact</a></li>
         </ul>
         <i className="bi bi-list mobile-nav-toggle"></i>
