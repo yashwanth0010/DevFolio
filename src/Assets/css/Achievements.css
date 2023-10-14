@@ -1,15 +1,11 @@
-.achievecard{
-    background: black;
-    display: flex;
 
-
-}
 .maincard{
   margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 3rem;
     border-radius: 5%;
     width: 59%;
+    background-color: #181717;
     border-color: white;
     border-style: solid;
     border-radius: 5rem;

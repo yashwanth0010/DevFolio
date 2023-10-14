@@ -1,6 +1,8 @@
+
 .about-mf .box-shadow-full {
     padding-top: 4rem;
     padding-bottom: 4rem;
+    background-color: #181717;
   }
   
   .about-mf .about-img {
@@ -23,7 +25,7 @@
   }
   
   .skill-mf .progress {
-    background-color: #cde1f8;
+    background-color: #111010;
     margin: 0.5rem 0 1.2rem 0;
     border-radius: 0;
     height: 0.7rem;
@@ -47,8 +49,8 @@
   }
 
   .Doc{
-    padding: 10px;
-    box-shadow: 10px 10px 10px 10px rgba(7, 7, 7, 0.08);
+
+    box-shadow: 5px 1px 10px 3px #dfd7d7;;
     display: block;
   }
   .Doc :hover{

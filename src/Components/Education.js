@@ -42,7 +42,7 @@ function Education() {
             class="section-counter paralax-mf bg-image"
             style={{ backgroundImage: `url(${bg})` }}
           >
-            <div class="overlay-mf"></div>
+            <div class="overlay-mfe"></div>
             <div class="container position-relative">
               <div class="row">
                 {Data.map((e) => (

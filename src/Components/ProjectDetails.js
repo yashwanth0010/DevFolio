@@ -44,12 +44,12 @@ function ProjectDetails() {
           <div class="hero-content display-table">
             <div class="table-cell">
               <div class="container">
-                <h2 class="hero-title mb-4" style={{color:"black"}}>{data.title}</h2>
+                <h2 class="hero-title mb-4" style={{color:"#dfd7d7"}}>{data.title}</h2>
                 <ol class="breadcrumb d-flex justify-content-center">
                   <b>
                 <strong>
-                  <li class="breadcrumb-item" style={{color:"black"}}>
-                    <Link to="/" style={{color:"black"}}>Home /  </Link>  Projects / {data.title}
+                  <li class="breadcrumb-item" style={{color:"#dfd7d7"}}>
+                    <Link to="/" style={{color:"#dfd7d7"}}>Home /  </Link>  Projects / {data.title}
                   </li>
                   </strong>
                   </b>

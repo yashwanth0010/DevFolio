@@ -4,7 +4,7 @@ function Achievements() {
   return (
     <>
       <section id="achievements"  class="portfolio-mf sect-pt4 route">
-      <div class="row">
+      <div class="achieverow">
             <div class="col-sm-12">
               <div class="title-box text-center">
                 <h3 class="title-a">Achievements</h3>
