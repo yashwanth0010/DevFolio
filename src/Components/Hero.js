@@ -16,9 +16,7 @@ function Hero() {
 
     return ( 
     <>
-         <div id="hero" className="hero route bg-image"  style={{ 
-      backgroundImage: `url(${BackImg})`  
-    }}>
+         <div id="hero" className="hero route bg-image" >
     <div className="overlay-itro"></div>
     <div className="hero-content display-table">
       <div className="table-cell">
@@ -32,6 +30,20 @@ function Hero() {
       </div>
     </div>
   </div>
+  <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
     </> );
 }
 
