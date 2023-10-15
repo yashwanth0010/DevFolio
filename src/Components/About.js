@@ -24,16 +24,18 @@ function About() {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="row">
-                      <div className="col-sm-5 col-md-4">
+                      <div className="col-sm-3 col-md-3">
                         <div className="about-img">
-                          <img
-                            src="assets/img/testimonial-2.jpg"
+                          {/*<img
+                            src="../imgs/dp.jpg"
                             className="img-fluid rounded b-shadow-a"
                             alt=""
-                          />
+                            height={80}
+                            width={100}
+  />*/}
                         </div>
                       </div>
-                      <div className="col-sm-6 col-md-8">
+                      <div className="col-sm-9 col-md-9">
                         <div className="about-info">
                           <p>
                             <span className="title-s">Name: </span>{" "}
@@ -115,23 +117,13 @@ function About() {
                         <h5 className="title-left">About me</h5>
                       </div>
                       <p className="lead">
-                        Curabitur non nulla sit amet nisl tempus convallis quis
-                        ac lectus. Curabitur arcu erat, accumsan id imperdiet
-                        et, porttitor at sem. Praesent sapien massa, convallis a
-                        pellentesque nec, egestas non nisi. Nulla porttitor
-                        accumsan tincidunt.
+                      Hey there! I'm Yashwanth, a passionate and creative Software Developer with a love for all things tech. 🚀
                       </p>
                       <p className="lead">
-                        Mauris blandit aliquet elit, eget tincidunt nibh
-                        pulvinar a. Vivamus suscipit tortor eget felis porttitor
-                        volutpat. Vestibulum ac diam sit amet quam vehicula
-                        elementum sed sit amet dui. porttitor at sem.
+                      In the world of 0s and 1s, I've found my playground, constantly exploring the vast landscape of software development and Machine Learning. With a toolbox filled with languages like Python, Java, R, C++, Javascript.
                       </p>
                       <p className="lead">
-                        Nulla porttitor accumsan tincidunt. Quisque velit nisi,
-                        pretium ut lacinia in, elementum id enim. Nulla
-                        porttitor accumsan tincidunt. Mauris blandit aliquet
-                        elit, eget tincidunt nibh pulvinar a.
+                      Through my academic endeavors and hands-on projects, I've honed my skills in Data Structures, Problem Solving, Software design, Version Control, Team collaboration.  I believe in the power of collaboration, and my experiences in team environments have taught me the importance of diverse perspectives and effective communication.
                       </p>
                     </div>
                   </div>

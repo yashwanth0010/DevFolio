@@ -28,7 +28,7 @@ function Contact() {
         <div className="row">
           <div className="col-sm-12">
             <div className="contact-mf">
-              <div id="contact" className="box-shadow-full">
+              <div id="contact" className="box-shadow-full" style={{borderRadius :"5rem"}}>
                 <div className="row">
                   <div className="col-md-6">
                     <div className="title-box-2">
