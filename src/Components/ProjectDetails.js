@@ -11,13 +11,14 @@ import {
   Pagination,
   Scrollbar,
   Autoplay,
-  EffectCube,
+  EffectCoverflow
 } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import "swiper/css/effect-cube";
+import "swiper/css/effect-coverflow";
+
 function ProjectDetails() {
   const params = useParams();
   console.log(params.id);
@@ -71,18 +72,16 @@ function ProjectDetails() {
                         Pagination,
                         Scrollbar,
                         Autoplay,
-                        EffectCube,
+                        EffectCoverflow
+
                       ]}
                       spaceBetween={50}
                       loop={true}
                       speed={1000}
-                      effect={"cube"}
+                      effect={"coverflow"}
                       grabCursor={true}
-                      cubeEffect={{
-                        shadow: true,
-                        slideShadows: true,
-                        shadowOffset: 20,
-                        shadowScale: 0.94,
+                      coverflowEffect={{
+                          slideShadows: true,
                       }}
                       pagination={{
                         clickable: true,
