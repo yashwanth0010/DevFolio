@@ -1,16 +1,16 @@
 body {
   background-color: black;
   color: #dfd7d7;
-  margin: 0;  
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #dfd7d7;
+  color: #fff;
 }
 
 a {
@@ -30,7 +30,7 @@ a {
 }
 
 a:hover {
-  color: #0078ff;
+  color: #2a0386;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
@@ -41,7 +41,7 @@ a:hover {
 
 .color-a {
   text-decoration: none;
-  color: #0078ff;
+  color: #2a0386;
 }
 
 .color-d {
@@ -101,7 +101,6 @@ a:hover {
 
 .overlay-mf {
   background-color: black;
-  
 }
 
 .overlay-mf {
@@ -129,8 +128,6 @@ a:hover {
   display: table-cell;
   vertical-align: middle;
 }
-
-/*--/ Sections /--*/
 .sect-4 {
   padding: 4rem 0;
 }
@@ -143,14 +140,12 @@ a:hover {
   margin-top: 4rem;
 }
 
-/*--/ Title s /--*/
 .title-s {
   font-weight: 600;
   color: #dfd7d7;
   font-size: 1.1rem;
 }
 
-/*--/ Title A /--*/
 .title-box {
   margin-bottom: 4rem;
 }
@@ -170,11 +165,10 @@ a:hover {
 .line-mf {
   width: 40px;
   height: 5px;
-  background-color: #0078ff;
+  background-color: #2a0386;
   margin: 0 auto;
 }
 
-/*--/ Title Left /--*/
 .title-box-2 {
   margin-bottom: 3rem;
 }
@@ -188,12 +182,11 @@ a:hover {
   content: "";
   position: absolute;
   height: 3px;
-  background-color: #0078ff;
+  background-color: #2a0386;
   width: 100px;
   bottom: -12px;
 }
 
-/*------/ Box /------*/
 .box-pl2 {
   padding-left: 2rem;
 }
@@ -213,7 +206,6 @@ a:hover {
   }
 }
 
-/*------/ Socials /------*/
 .socials {
   padding: 1.5rem 0;
 }
@@ -229,18 +221,16 @@ a:hover {
   border-radius: 50%;
   line-height: 1.9;
   margin: 0 15px 0 0;
-  box-shadow: 0 0 0 3px #0078ff;
+  box-shadow: 0 0 0 3px #2a0386;
   transition: all 500ms ease;
 }
 
 .socials .ico-circle:hover {
-  background-color: #0078ff;
+  background-color: #553994;
   color: #fff;
   box-shadow: 0 0 0 3px #cde1f8;
   transition: all 500ms ease;
 }
-
-/*------/ Ico Circle /------*/
 .ico-circle {
   height: 100px;
   width: 100px;
@@ -249,13 +239,12 @@ a:hover {
   line-height: 1.55;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0 10px #0078ff;
+  box-shadow: 0 0 0 10px #2a0386;
   display: block;
   align-items: center;
   justify-content: center;
 }
 
-/*------/ Button /------*/
 .button {
   display: inline-block;
   padding: 0.3rem 0.6rem;
@@ -276,14 +265,14 @@ a:hover {
 }
 
 .button:hover {
-  background-color: #0062d3;
+  background-color: #553994;
   color: #fff;
   transition: all 500ms ease;
 }
 
 .button-a {
   text-decoration: none;
-  background-color: #0078ff;
+  background-color: #2a0386;
   color: #fff;
   border-color: #cde1f8;
 }
