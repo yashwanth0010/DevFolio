@@ -38,8 +38,9 @@
 }
 
 .projects-content .w-like {
+  height: 5rem;
   font-size: 2.5rem;
-  color: #0078ff;
+  color: #2a0386;
   float: right;
 }
 
@@ -52,6 +53,7 @@
 }
 
 .w-title {
+  height: 3rem;
   font-size: 1.2rem;
 }
 
