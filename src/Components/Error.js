@@ -5,18 +5,18 @@ import { Link } from 'react-router-dom';
 function Error404() {
     return (  
         <>
-        <div class="Errorcontainer"  style={{marginTop:'100px'}}>
-    <div class="row">
+        <div className="Errorcontainer"  style={{marginTop:'100px'}}>
+    <div className="row">
         <div>
             <div >
-                <div class="errorContainer">
-                    <img class="img-error" src={error} alt='Error'/>
+                <div className="errorContainer">
+                    <img className="img-error" src={error} alt='Error'/>
                     <h2>404 Not Found</h2>
                     <p>Sorry, an error has occured, Requested page not found!</p>
-                    <div class="error-actions">
+                    <div className="error-actions">
                         <Link to='/'>
-                        <a  class="btn btn-primary btn-lg">
-                            <span class="glyphicon glyphicon-arrow-left"></span>
+                        <a  className="btn btn-primary btn-lg">
+                            <span className="glyphicon glyphicon-arrow-left"></span>
                             Back To MyPortfolio 
                         </a>
                         </Link>

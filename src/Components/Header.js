@@ -1,11 +1,23 @@
-import React, { Component } from "react";
+import React, {
+  Component,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  useMemo,
+} from "react";
 import "../Assets/css/Header.css";
 
 function Header() {
-  const scrollTo = (ele) => {
+  const scrollTo = (ele, cname) => {
     document
       .getElementById(ele)
       ?.scrollIntoView({ block: "start", behavior: "smooth" });
+    var act = document.querySelectorAll(".active");
+    for (var i = 0; i < act.length; i++) {
+      act[i].className = "nav-link scrollto";
+    }
+    document.getElementById(cname).className = "nav-link scrollto active";
   };
 
   return (
@@ -15,50 +27,62 @@ function Header() {
           <h1 className="logo">
             <a href="">Portfolio</a>
           </h1>
-        
+
           <nav id="navbar" className="navbar">
             <ul>
               <li
                 onClick={() => {
-                  scrollTo("hero");
+                  scrollTo("hero", "hhero");
                 }}
               >
-                <a className="nav-link scrollto active">Home</a>
+                <a className="nav-link scrollto active" id="hhero">
+                  Home
+                </a>
               </li>
               <li
                 onClick={() => {
-                  scrollTo("about");
+                  scrollTo("about", "habout");
                 }}
               >
-                <a className="nav-link scrollto">About</a>
+                <a className="nav-link scrollto" id="habout">
+                  About
+                </a>
               </li>
               <li
                 onClick={() => {
-                  scrollTo("education");
+                  scrollTo("education", "heducation");
                 }}
               >
-                <a className="nav-link scrollto">Education</a>
+                <a className="nav-link scrollto" id="heducation">
+                  Education
+                </a>
               </li>
               <li
                 onClick={() => {
-                  scrollTo("projects");
+                  scrollTo("projects", "hprojects");
                 }}
               >
-                <a className="nav-link scrollto ">Projects </a>
+                <a className="nav-link scrollto " id="hprojects">
+                  Projects{" "}
+                </a>
               </li>
               <li
                 onClick={() => {
-                  scrollTo("achievements");
+                  scrollTo("achievements", "hachievements");
                 }}
               >
-                <a className="nav-link scrollto">Achievements</a>
+                <a className="nav-link scrollto" id="hachievements">
+                  Achievements
+                </a>
               </li>
               <li
                 onClick={() => {
-                  scrollTo("contact");
+                  scrollTo("contact", "hcontact");
                 }}
               >
-                <a className="nav-link scrollto">Contact</a>
+                <a className="nav-link scrollto" id="hcontact">
+                  Contact
+                </a>
               </li>
             </ul>
             <i className="bi bi-list mobile-nav-toggle"></i>

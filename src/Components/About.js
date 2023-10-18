@@ -87,7 +87,7 @@ function About() {
                               href={resume}
                               download={"Yashwanth's Resume"}
                             >
-                              <i class="bi bi-download"></i>
+                              <i className="bi bi-download"></i>
                             </a>
                           </div>
                         </a>

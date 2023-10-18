@@ -22,7 +22,7 @@ function Contact() {
 
     return (  
     <>
-    <section id="contact" className="paralax-mf footer-paralax bg-image sect-mt4 route" >
+    <section id="contact" className="paralax-mf footer-paralax bg-image sect-mt4 route">
       <div className="overlay-mf"></div>
       <div className="container">
         <div className="row">

@@ -9,31 +9,31 @@ function ProjectsCard(props) {
 
   return (
     <>
-      <div class="col-md-4">
-        <div class="projects-box">
+      <div className="col-md-4">
+        <div className="projects-box">
           <PageAnimation>
             <Link to={"/projects/" + url}>
-              <a data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="projects-img">
-                  <img src={img} alt="" class="img-fluid" />
+              <a data-gallery="portfolioGallery" className="portfolio-lightbox">
+                <div className="projects-img">
+                  <img src={img} alt="" className="img-fluid" />
                 </div>
               </a>
-              <div class="projects-content">
-                <div class="row">
-                  <div class="col-sm-10">
-                    <h2 class="w-title">{title}</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">
+              <div className="projects-content">
+                <div className="row">
+                  <div className="col-sm-10">
+                    <h2 className="w-title">{title}</h2>
+                    <div className="w-more">
+                      <span className="w-ctegory" key={props.id}>
                         {tech.map((ele) => (
-                          <span>{ele} | </span>
+                          <span key={props.id}>{ele} | </span>
                         ))}
                       </span>{" "}
                     </div>
                   </div>
-                  <div class="col-sm-2">
-                    <div class="w-like">
+                  <div className="col-sm-2">
+                    <div className="w-like">
                       <Link to= {"/projects/" + url}>
-                        <span class="bi bi-box-arrow-right"></span>
+                        <span className="bi bi-box-arrow-right"></span>
                       </Link>
                     </div>
                   </div>

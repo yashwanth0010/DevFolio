@@ -31,22 +31,23 @@ function Education() {
 
   return (
     <>
-      <section id="education"  class="portfolio-mf sect-pt4 route">
-        <div class="educontainer">
-          <div class="title-box text-center">
-            <h3 class="title-a">Education</h3>
-            <p class="subtitle-a"></p>
-            <div class="line-mf"></div>
+      <section id="education"  className="portfolio-mf sect-pt4 route">
+        <div className="educontainer">
+          <div className="title-box text-center">
+            <h3 className="title-a">Education</h3>
+            <p className="subtitle-a"></p>
+            <div className="line-mf"></div>
           </div>
           <div
-            class="section-counter paralax-mf bg-image"
+            className="section-counter paralax-mf bg-image"
             style={{ backgroundImage: `url(${bg})` }}
           >
-            <div class="overlay-mfe"></div>
-            <div class="container position-relative">
-              <div class="row">
+            <div className="overlay-mfe"></div>
+            <div className="container position-relative">
+              <div className="row">
                 {Data.map((e) => (
                   <EducationCard
+                  key={e.id}
                     img={e.img}
                     inst={e.inst}
                     edu={e.edu}

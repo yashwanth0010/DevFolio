@@ -8,20 +8,20 @@ function Projects() {
 
   return (
     <>
-      <section id="projects" class="portfolio-mf sect-pt4 route">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <div class="title-box text-center">
-                <h3 class="title-a">Projects</h3>
-                <p class="subtitle-a">
+      <section id="projects" className="portfolio-mf sect-pt4 route">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-12">
+              <div className="title-box text-center">
+                <h3 className="title-a">Projects</h3>
+                <p className="subtitle-a">
                   
                 </p>
-                <div class="line-mf"></div>
+                <div className="line-mf"></div>
               </div>
             </div>
           </div>
-          <div class="row">
+          <div className="row">
             {ProjectDetails.map((ele) => (
               <ProjectsCard
                 key={ele.id}

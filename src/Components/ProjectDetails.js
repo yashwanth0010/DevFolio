@@ -38,18 +38,18 @@ function ProjectDetails() {
     <>
       <PageAnimation>
         <div
-          class="hero hero-single route bg-image"
+          className="hero hero-single route bg-image"
           style={{ backgroundImage: `url(${"." + data.img})` }}
         >
-          <div class="overlay-mf"></div>
-          <div class="hero-content display-table">
-            <div class="table-cell">
-              <div class="container">
-                <h2 class="hero-title mb-4" style={{color:"#dfd7d7"}}>{data.title}</h2>
-                <ol class="breadcrumb d-flex justify-content-center">
+          <div className="overlay-mf"></div>
+          <div className="hero-content display-table">
+            <div className="table-cell">
+              <div className="container">
+                <h2 className="hero-title mb-4" style={{color:"#dfd7d7"}}>{data.title}</h2>
+                <ol className="breadcrumb d-flex justify-content-center">
                   <b>
                 <strong>
-                  <li class="breadcrumb-item" style={{color:"#dfd7d7"}}>
+                  <li className="breadcrumb-item" style={{color:"#dfd7d7"}}>
                     <Link to="/" style={{color:"#dfd7d7"}}>Home /  </Link>  Projects / {data.title}
                   </li>
                   </strong>
@@ -61,11 +61,11 @@ function ProjectDetails() {
         </div>
 
         <main id="main">
-          <section id="portfolio-details" class="portfolio-details">
-            <div class="container">
-              <div class="row ">
-                <div class="col-lg-7">
-                  <div class="portfolio-details-slider swiper">
+          <section id="portfolio-details" className="portfolio-details">
+            <div className="container">
+              <div className="row ">
+                <div className="col-lg-7">
+                  <div className="portfolio-details-slider swiper">
                     <Swiper
                       modules={[
                         Navigation,
@@ -102,16 +102,16 @@ function ProjectDetails() {
 
                     </Swiper>
 
-                    <div class="swiper-pagination"></div>
+                    <div className="swiper-pagination"></div>
                   </div>
 
                   <Link to="/">
-                    <span class="bi bi-arrow-left-circle"></span>{" "}
+                    <span className="bi bi-arrow-left-circle"></span>{" "}
                   </Link>
                 </div>
 
-                <div class="col-lg-5">
-                  <div class="portfolio-info">
+                <div className="col-lg-5">
+                  <div className="portfolio-info">
                     <h3>Project Information</h3>
                     <ul>
                     <li>
@@ -124,19 +124,19 @@ function ProjectDetails() {
                         <strong>TechStack </strong>: {data.tectStack.map((ele)=><span>{ele} | </span>)}
                       </li>
                       <li>
-                        <strong>Github </strong>:  <a href={data.github}  target="_blank">  {data.github.substring(8)} <i class="bi bi-box-arrow-up-right"></i> </a>
+                        <strong>Github </strong>:  <a href={data.github}  target="_blank">  {data.github.substring(8)} <i className="bi bi-box-arrow-up-right"></i> </a>
                       </li>
                       {
                         data.live && <li>
-                          <strong>Live Project </strong>:  <a href={data.live}  target="_blank">  {data.live} <i class="bi bi-box-arrow-up-right"></i> </a>
+                          <strong>Live Project </strong>:  <a href={data.live}  target="_blank">  {data.live} <i className="bi bi-box-arrow-up-right"></i> </a>
                         </li>
                       }
                     </ul>
                   </div>
-                  <div class="portfolio-description">
+                  <div className="portfolio-description">
                     <h2>Project Description</h2>
                     {data.description.map((ele)=>(
-                      <p><i class="bi bi-caret-right-fill"></i> {ele}</p>
+                      <p><i className="bi bi-caret-right-fill"></i> {ele}</p>
                     ))}
                   </div>
                 </div>
@@ -145,14 +145,14 @@ function ProjectDetails() {
           </section>
         </main>
         <footer>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="copyright-box">
-                  <p class="copyright">
+          <div className="container">
+            <div className="row">
+              <div className="col-sm-12">
+                <div className="copyright-box">
+                  <p className="copyright">
                           All Rights Reserved
                   </p>
-                  <div class="credits"></div>
+                  <div className="credits"></div>
                 </div>
               </div>
             </div>

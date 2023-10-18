@@ -9,8 +9,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./Components/About";
 import Education from "./Components/Education";
 import Achievements from "./Components/Achievements";
+import { useRef,useState,useMemo,useEffect } from "react";
+
 
 function App() {
+ 
   return (
     <>
       <BrowserRouter>
