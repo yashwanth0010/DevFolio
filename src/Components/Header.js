@@ -9,6 +9,57 @@ import React, {
 import "../Assets/css/Header.css";
 
 function Header() {
+
+  window.onscroll = function (e) {
+    console.log(window.scrollY); 
+    if(window.scrollY ==0){
+      var act = document.querySelectorAll(".active");
+      for (var i = 0; i < act.length; i++) {
+        act[i].className = "nav-link scrollto";
+      }
+      if(document.getElementById("hhero"))
+      document.getElementById("hhero").className = "nav-link scrollto active";
+    }
+   else if(window.scrollY >0  && window.scrollY<1200){
+      var act = document.querySelectorAll(".active");
+      for (var i = 0; i < act.length; i++) {
+        act[i].className = "nav-link scrollto";
+      }
+      if(document.getElementById("habout"))
+      document.getElementById("habout").className = "nav-link scrollto active";
+    }
+    else if(window.scrollY > 1200 && window.scrollY<2140){
+      var act = document.querySelectorAll(".active");
+      for (var i = 0; i < act.length; i++) {
+        act[i].className = "nav-link scrollto";
+      }
+      if(document.getElementById("heducation"))
+      document.getElementById("heducation").className = "nav-link scrollto active";
+    }
+    else if(window.scrollY > 2140 && window.scrollY<3120){
+      var act = document.querySelectorAll(".active");
+      for (var i = 0; i < act.length; i++) {
+        act[i].className = "nav-link scrollto";
+      }
+      document.getElementById("hprojects").className = "nav-link scrollto active";
+    }
+    else if(window.scrollY > 3120 && window.scrollY<4200){
+      var act = document.querySelectorAll(".active");
+      for (var i = 0; i < act.length; i++) {
+        act[i].className = "nav-link scrollto";
+      }
+      document.getElementById("hachievements").className = "nav-link scrollto active";
+    }
+    else if(window.scrollY > 4200){
+      var act = document.querySelectorAll(".active");
+      for (var i = 0; i < act.length; i++) {
+        act[i].className = "nav-link scrollto";
+      }
+      document.getElementById("hcontact").className = "nav-link scrollto active";
+    }
+
+  };
+
   const scrollTo = (ele, cname) => {
     document
       .getElementById(ele)
