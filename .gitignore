@@ -3,6 +3,7 @@
 #Files
 Contact.js
 Key.txt
+.env
 
 # dependencies
 /node_modules
