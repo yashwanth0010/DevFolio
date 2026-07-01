@@ -37,7 +37,7 @@ function Contact() {
                       </h5>
                     </div>
                     <div>
-                      <form    onSubmit={sendEmail}   method="post" role="form" className="php-email-form">
+                      <form onSubmit={sendEmail}   method="post" role="form" className="php-email-form">
                         <div className="row">
                           <div className="col-md-12 mb-3">
                             <div className="form-group">

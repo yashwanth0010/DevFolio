@@ -13,7 +13,7 @@
     position: relative;
 }
 
-.line {
+  .line {
     position: relative;
     max-width: 80%;
     margin: 0 0 0 10%;
@@ -62,9 +62,19 @@
     margin-left: 7%;
     color: rgb(207, 193, 193);
   }
-.row{
+
+  .achievement-link {
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  .achievement-link:hover {
+    color: #3b82f6;
+    text-decoration: underline;
+  }
+
+  .row{
   width: 98%;
-}
+  } 
 
 
 
