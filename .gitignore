@@ -7,6 +7,7 @@ Key.txt
 
 # dependencies
 /node_modules
+/build
 /.pnp
 .pnp.js
 
