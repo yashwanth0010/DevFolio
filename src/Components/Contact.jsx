@@ -1,30 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import EmailNotification from './EmailNotification';
 
 const Contact = () => {
+  const [notification, setNotification] = useState({ show: false, success: false, fading: false });
+  const VISIBLE_MS = 3000; // time before starting fade
+  const FADE_MS = 500; // should match Tailwind duration-500
+
+  const handleNotificationTransitionEnd = (e) => {
+    // hide when opacity transition finishes and we're in fading state
+    if (e.propertyName === 'opacity' && notification.fading) {
+      setNotification({ show: false, success: false, fading: false });
+    }
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
-    const serviceId = process.env.REACT_APP_Email_Service_Id;
-    const templateId = process.env.REACT_APP_Email_Template_Id;
-    const publicKey = process.env.REACT_APP_Email_Public_Key;
+    const serviceId = import.meta.env.VITE_Email_Service_Id;
+    const templateId = import.meta.env.VITE_Email_Template_Id;
+    const publicKey = import.meta.env.VITE_Email_Public_Key;
     const form = document.getElementsByTagName('form');
 
     // Initialize EmailJS with the public key
     emailjs.init(publicKey);
     emailjs.sendForm(serviceId, templateId, form['0']).then(
       (result) => {
-        <EmailNotification type="success" title="Message sent" message="Your message has been sent successfully." />;
+        setNotification({ show: true, success: true, fading: false });
+        setTimeout(() => setNotification((s) => ({ ...s, fading: true })), VISIBLE_MS);
       },
       (error) => {
         console.log(error.text);
-        <EmailNotification type="error" title="Couldn't send message" message="Something went wrong. Please try again later." />;
+        setNotification({ show: true, success: false, fading: false });
+        setTimeout(() => setNotification((s) => ({ ...s, fading: true })), VISIBLE_MS);
       },
     );
+
   };
 
   return (
     <>
+      {notification.show && (
+        <>
+          <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40" />
+          <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+            <div
+              className={`pointer-events-auto transition-opacity duration-500 ease-out ${notification.fading ? 'opacity-0' : 'opacity-100'}`}
+              onTransitionEnd={handleNotificationTransitionEnd}
+            >
+              <EmailNotification success={notification.success} />
+            </div>
+          </div>
+        </>
+      )}
       <section
         id="contact"
         className="paralax-mf footer-paralax bg-image sect-mt4 route">
