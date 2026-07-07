@@ -22,7 +22,7 @@ function Achievements() {
                 <div className="line">
                   {achievements.map((achievement, index) => (
                     <div className="Component right-5" key={`${achievement.Title}-${index}`}>
-                      <h4 className="p-3">
+                      <h4 className="pl-6 pt-2.75">
                         {achievement.Title}
                         {achievement.Link && (
                           <span>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "../Assets/css/About.css";
-import resume from "../Assets/latest.pdf";
+import resume from "../assets/latest.pdf";
 import { Document, Page, pdfjs } from "react-pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function About() {
   const [height, setHeight] = useState(450);
@@ -82,13 +82,13 @@ function About() {
                             />
                           </Document>
                           <div className="overlayd">
-                            <a
+                            { <a
                               className="icond"
                               href={resume}
                               download={"Yashwanth's Resume"}
                             >
                               <i className="bi bi-download"></i>
-                            </a>
+                            </a> }
                           </div>
                         </a>
                       </div>
