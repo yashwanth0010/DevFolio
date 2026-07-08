@@ -8,7 +8,7 @@
     "skipLibCheck": true,
     "jsx": "react-jsx",        // or "react" for older React versions
     "allowJs": true,           // allow .js and .jsx files
-    "checkJs": false,          // don't type-check plain JS files
+    "checkJs": true,          // don't type-check plain JS files
     "esModuleInterop": true,   // allow default imports from CommonJS
 
     /* Bundler mode */

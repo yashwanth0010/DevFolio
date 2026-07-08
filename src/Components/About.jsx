@@ -1,18 +1,9 @@
-import React, { useState } from "react";
 import "../Assets/css/About.css";
 import resume from "../assets/latest.pdf";
 import { Document, Page, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function About() {
-  const [height, setHeight] = useState(450);
-
-  const zoomIn = () => {
-    setHeight(500);
-  };
-  const zoomOut = () => {
-    setHeight(450);
-  };
 
   return (
     <>
@@ -69,27 +60,16 @@ function About() {
                           className="maino"
                           href={resume}
                           download={"Yashwanth's Resume"}
-                          onMouseEnter={zoomIn}
-                          onMouseLeave={zoomOut}
                         >
                           <Document file={resume} className="Doc">
                             <Page
                               pageNumber={1}
                               renderTextLayer={false}
                               renderAnnotationLayer={false}
-                              customTextRenderer={false}
-                              height={height}
+                              height={550}
+                              className="Doc"
                             />
                           </Document>
-                          <div className="overlayd">
-                            { <a
-                              className="icond"
-                              href={resume}
-                              download={"Yashwanth's Resume"}
-                            >
-                              <i className="bi bi-download"></i>
-                            </a> }
-                          </div>
                         </a>
                       </div>
                       {/*
