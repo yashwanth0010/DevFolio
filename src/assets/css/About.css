@@ -1,85 +1,88 @@
-
 .about-mf .box-shadow-full {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    background-color: #181717;
-    border-radius: 5rem;
-  }
-  
-  .about-mf .about-img {
-    margin-bottom: 2rem;
-  }
-  
-  .about-mf .about-img img {
-    margin-left: 10px;
-  }
-  
-  @media (min-width: 767px) {
-    .about-mf .box-pl2 {
-      margin-top: 3rem;
-      padding-left: 0rem;
-    }
-  }
-  
-  .skill-mf span {
-    color: #4e4e4e;
-  }
-  
-  .skill-mf .progress {
-    background-color: #111010;
-    margin: 0.5rem 0 1.2rem 0;
-    border-radius: 0;
-    height: 0.7rem;
-  }
-  
-  .skill-mf .progress .progress-bar {
-    height: 0.7rem;
-    background-color: #0078ff;
-  }
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: #181717;
+  border-radius: 5rem;
+}
 
-  .resume{
-    display: flex;
-    justify-content: center;
-    
-  }
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
 
-  .maino{
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
+.about-mf .about-img img {
+  margin-left: 10px;
+}
 
-  .Doc{
+@media (min-width: 767px) {
+  .about-mf .box-pl2 {
+    margin-top: 3rem;
+    padding-left: 0rem;
+  }
+}
 
-    box-shadow: 5px 1px 10px 3px #dfd7d7;;
-    display: block;
-  }
-  .Doc :hover{
-    transition: all 1s;
-    cursor: pointer;
-    transform: scale(1);
-    font-size: 60px;
-    color: black;
-  }
-  
-  .overlayd {
-    position: absolute;
-    height: 100%;
-    opacity: 0;
-    transition: .3s ease;
-    }
-  
-  .maino:hover .overlayd {
-    opacity: 1;
-  }
-  
-  .icond {
-    color: black;
-    font-size: 100px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+.skill-mf span {
+  color: #4e4e4e;
+}
+
+.skill-mf .progress {
+  background-color: #111010;
+  margin: 0.5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: 0.7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: 0.7rem;
+  background-color: #0078ff;
+}
+
+.resume {
+  display: flex;
+  justify-content: center;
+}
+
+.maino {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.Doc {
+  box-shadow: 5px 1px 10px 3px #dfd7d7;
+  display: block;
+}
+.Doc :hover {
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+  transform: scale(1.06);
+  font-size: 60px;
+  color: black;
+  box-shadow: 5px 1px 10px 3px #dfd7d7;
+}
+
+.Doc :not(:hover) {
+  transition: all 1s;
+  transform: scale(1);
+}
+
+.overlayd {
+  position: absolute;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.maino:hover .overlayd {
+  opacity: 1;
+}
+
+.icond {
+  color: black;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

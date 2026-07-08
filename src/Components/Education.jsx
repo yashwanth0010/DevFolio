@@ -1,34 +1,9 @@
-import React, { Component } from "react";
 import "../Assets/css/Education.css";
 import bg from "../Assets/img/edubg.jpg";
 import EducationCard from "./EducationCard";
+import { EducationData as Data } from "../Data/education";
 
 function Education() {
-  const Data = [
-    {
-      id: 1,
-      img: "../imgs/btech_icon.png",
-      edu: "Bachelor's Degree",
-      inst: "CMR College Of Engineering & Technology",
-      cgpa: 8.56,
-      branch:"CSE(AI & ML)"
-    },
-    {
-        id: 2,
-      img: "../imgs/inter_icon.png",
-      edu: "Intermediate",
-      inst: "Narayana Junior College",
-      cgpa: 9.3,
-    },
-    {
-        id: 3,
-      img: "../imgs/school_icon.png",
-      edu: "High School",
-      inst: "Brilliant Grammar High School",
-      cgpa: 9.8,
-    }
-  ];
-
   return (
     <>
       <section id="education"  className="portfolio-mf sect-pt4 route">
@@ -43,16 +18,18 @@ function Education() {
             style={{ backgroundImage: `url(${bg})` }}
           >
             <div className="overlay-mfe"></div>
-            <div className="container position-relative">
-              <div className="row">
+            <div className="w-full position-relative">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {Data.map((e) => (
                   <EducationCard
-                  key={e.id}
+                  id={e.id}
                     img={e.img}
                     inst={e.inst}
                     edu={e.edu}
                     cgpa={e.cgpa}
                     branch={e.branch}
+                    startingYear={e.startingYear}
+                    finishedYear={e.finishedYear}
                   />
                 ))}
               </div>

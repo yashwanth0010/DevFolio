@@ -17,7 +17,7 @@
     text-align: center;
   }
   
-  @media (min-width: 577px) {
+  @media (min-width: 1577px) {
     .counter-box {
       margin-bottom: 1.8rem;
     }
