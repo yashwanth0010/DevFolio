@@ -1,4 +1,3 @@
-import React from 'react';
 import '../Assets/css/Achievements.css';
 import { achievements } from '../Data/achievements';
 import { Shapes } from './Shapes';
