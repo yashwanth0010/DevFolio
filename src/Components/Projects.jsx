@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import "../Assets/css/Projects.css";
 import ProjectsCard from "./ProjectsCard";
 import Data from "./Data";
@@ -14,9 +13,6 @@ function Projects() {
             <div className="col-sm-12">
               <div className="title-box text-center">
                 <h3 className="title-a">Projects</h3>
-                <p className="subtitle-a">
-                  
-                </p>
                 <div className="line-mf"></div>
               </div>
             </div>

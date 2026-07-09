@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
 import '../Assets/css/Hero.css';
-import BackImg from "../Assets/img/hero-bg.jpg"
 import {Typewriter, Cursor} from 'react-simple-typewriter'
 
 function Hero() {
 
     const data_items = Typewriter({
       words:['Software Engineer', 'AI enthusiast', 'Freelancer'],
-      loop:{},
       typeSpeed:120,
       deleteSpeed:100,
     });
