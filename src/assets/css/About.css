@@ -3,6 +3,7 @@
   padding-bottom: 4rem;
   background-color: #181717;
   border-radius: 5rem;
+  animation: float 2.3s ease-in-out infinite;
 }
 
 .about-mf .about-img {
@@ -42,25 +43,23 @@
 }
 
 .maino {
-  display: flex;
+  box-shadow: 5px 1px 10px 3px #dfd7d7;
+  display: inline-block;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+  border-radius: 30px;
 }
 
-.Doc {
-  box-shadow: 5px 1px 10px 3px #dfd7d7;
-  display: block;
-}
-.Doc :hover {
+.maino:hover {
   transition: all 1s ease-in-out;
   cursor: pointer;
-  transform: scale(1.06);
+  transform: scale(1.15);
   font-size: 60px;
   color: black;
   box-shadow: 5px 1px 10px 3px #dfd7d7;
 }
-
-.Doc :not(:hover) {
+.maino :not(:hover) {
   transition: all 1s;
   transform: scale(1);
 }
@@ -72,7 +71,7 @@
   transition: 0.3s ease;
 }
 
-.maino:hover .overlayd {
+.overlayd {
   opacity: 1;
 }
 
@@ -85,4 +84,19 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(20px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-40px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(20px);
+  }
 }

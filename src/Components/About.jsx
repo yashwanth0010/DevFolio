@@ -97,13 +97,13 @@ function About() {
                         <h5 className="title-left">About me</h5>
                       </div>
                       <p className="lead">
-                      Hey there! I'm Yashwanth, a passionate and creative Software Developer with a love for all things tech.
+                        Hey there! I'm Yashwanth, a passionate and creative Software Developer with a love for all things tech.
                       </p>
                       <p className="lead">
-                      In the world of 0s and 1s, I've found my playground, constantly exploring the vast landscape of software development and Machine Learning. With a toolbox filled with languages like C#, .NET Core, Javascript, ReactJS, SQL.
+                        In the world of 0s and 1s, I've found my playground, constantly exploring the vast landscape of software development and Machine Learning. With a toolbox filled with languages like C#, .NET Core, Javascript, ReactJS, SQL.
                       </p>
                       <p className="lead">
-                      Through my academic endeavors and hands-on projects, I've honed my skills in Data Structures, Problem Solving, Software design, Version Control, Team collaboration.  I believe in the power of collaboration, and my experiences in team environments have taught me the importance of diverse perspectives and effective communication.
+                        Through my academic endeavors and hands-on projects, I've honed my skills in Data Structures, Problem Solving, Software design, Version Control, Team collaboration.  I believe in the power of collaboration, and my experiences in team environments have taught me the importance of diverse perspectives and effective communication.
                       </p>
                     </div>
                   </div>

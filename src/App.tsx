@@ -16,7 +16,7 @@ function App() {
 
   return (
     <>
-     <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route
             path="/"
@@ -26,7 +26,7 @@ function App() {
                 <Hero />
                 <About />
                 <Experience />
-                 <TestComp />
+                {/* <TestComp /> */}
                 <Education />
                 <Projects />
                 <Achievements />
