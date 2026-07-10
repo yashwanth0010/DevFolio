@@ -1,4 +1,4 @@
-export type Project = {
+export type ExpProject = {
     name: string;
     description: string;
     stack: string[];
@@ -12,5 +12,15 @@ export type Company = {
     period: string;
     location?: string;
     summary?: string;
-    projects?: Project[];
+    projects?: ExpProject[];
+};
+
+export type Project = {
+    title: string;
+    category: string;
+    description: string;
+    stack: string[];
+    liveUrl?: string ;
+    repoUrl?: string ;
+    accent: string;
 };

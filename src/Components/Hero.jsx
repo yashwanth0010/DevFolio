@@ -5,8 +5,9 @@ function Hero() {
 
     const data_items = Typewriter({
       words:['Software Engineer', 'AI enthusiast', 'Freelancer'],
-      typeSpeed:120,
+      typeSpeed:80,
       deleteSpeed:100,
+      loop: 0,
     });
   
 

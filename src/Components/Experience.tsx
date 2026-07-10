@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ExperienceData as experiences } from "../Data/experience";
-import type { Company, Project } from "../types/types";
+import type { Company, ExpProject } from "../types/types";
 
 /**
  * Experience — deep-dark themed section with one large card per company
@@ -99,7 +99,7 @@ export default function Experience() {
                                     data-idx={idx}
                                     className={[
                                         "relative pl-12 sm:pl-20",
-                                        "transition-all duration-700",
+                                        "transition-all duration-3500",
                                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
                                     ].join(" ")}
                                     style={{ transitionDelay: `${idx * 120}ms` }}
@@ -189,14 +189,14 @@ function CompanyCard({ company }: { company: Company }) {
                                 <span className="absolute -inset-0.5 -z-10 rounded-2xl bg-linear-to-br from-purple-500/30 to-cyan-500/30 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100" />
                             </div>
                             <div>
-                                <h3 className="text-xl sm:text-2xl font-semibold text-white">
+                                <h3 className="text-xl sm:text-2xl font-extrabold text-white">
                                     {company.company}
                                 </h3>
-                                <p className="mt-0.5 text-sm text-cyan-300/80">{company.role}</p>
+                                <p className="mt-0.5 text-sm font-semibold">{company.role}</p>
                             </div>
                         </div>
 
-                        <div className="flex flex-col sm:items-end text-xs text-white/45">
+                        <div className="flex flex-col sm:items-end text-xs font-normal">
                             <span className="rounded-full border border-white/6 bg-black/40 px-3 py-1">
                                 {company.period}
                             </span>
@@ -208,13 +208,13 @@ function CompanyCard({ company }: { company: Company }) {
 
                     {/* Optional summary */}
                     {company.summary && (
-                        <p className="mb-6 max-w-3xl text-sm leading-relaxed text-white/60">
+                        <p className="mb-6 max-w-3xl text-sm leading-relaxed font-light">
                             {company.summary}
                         </p>
                     )}
 
                     {/* Section label */}
-                    <p className="mb-4 text-[11px] uppercase tracking-[0.3em] text-purple-300/60">
+                    <p className="mb-4 text-sm uppercase tracking-widest font-bold">
                         Projects
                     </p>
 
@@ -230,7 +230,7 @@ function CompanyCard({ company }: { company: Company }) {
     );
 }
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project }: { project: ExpProject }) {
     const cardRef = useRef<HTMLDivElement | null>(null);
     const [tilt, setTilt] = useState({ x: 0, y: 0 });
     const [glow, setGlow] = useState({ x: 50, y: 50 });
@@ -276,11 +276,11 @@ function ProjectCard({ project }: { project: Project }) {
                         <a
                             href={project.link}
                             aria-label={`Open ${project.name}`}
-                            className="text-white/35 transition-colors hover:text-purple-300"
+                            className="text-white/35 transition-colors h-full hover:text-purple-300"
                         >
                             <svg
-                                width="16"
-                                height="16"
+                                width="20"
+                                height="20"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="currentColor"
@@ -296,7 +296,7 @@ function ProjectCard({ project }: { project: Project }) {
                     )}
                 </div>
 
-                <p className="mb-4 flex-1 text-sm leading-relaxed text-white/55">
+                <p className="mb-4 flex-1 text-sm leading-relaxed font-normal">
                     {project.description}
                 </p>
 
@@ -304,7 +304,7 @@ function ProjectCard({ project }: { project: Project }) {
                     {project.stack.map((tech) => (
                         <span
                             key={tech}
-                            className="rounded-full border border-white/6 bg-black/40 px-2.5 py-0.5 text-[11px] text-white/65 transition-colors hover:border-purple-400/40 hover:text-purple-200"
+                            className="rounded-full border border-white/6 bg-black/40 px-2.5 py-0.5 text-sm font-normal transition-colors hover:text-amber-600"
                         >
                             {tech}
                         </span>

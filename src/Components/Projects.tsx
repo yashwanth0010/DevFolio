@@ -1,9 +1,10 @@
 import "../Assets/css/Projects.css";
-import ProjectsCard from "./ProjectsCard";
-import Data from "./Data";
+import { ProjectCell } from "./ProjectsCard";
+import { ProjectsData } from "../Data/projects";
+import type { Project } from "../types/types";
 
 function Projects() {
-  const ProjectDetails = Data;
+  const projects: Project[] = ProjectsData;
 
   return (
     <>
@@ -17,15 +18,9 @@ function Projects() {
               </div>
             </div>
           </div>
-          <div className="row">
-            {ProjectDetails.map((ele) => (
-              <ProjectsCard
-                key={ele.id}
-                img={ele.img}
-                title={ele.title}
-                tech={ele.tectStack}
-                url = {ele.url}
-              />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {projects.map((p, i) => (
+              <ProjectCell key={p.title} project={p} index={i} />
             ))}
           </div>
         </div>
