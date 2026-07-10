@@ -8,6 +8,7 @@ export type Project = {
 export type Company = {
     company: string;
     role: string;
+    logo?: string;
     period: string;
     location?: string;
     summary?: string;

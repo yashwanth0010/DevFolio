@@ -11,7 +11,7 @@ function About() {
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
-              <div className="box-shadow-full">
+              <div className="box-shadow-full  border border-white/6">
                 <div className="row">
                   <div className="col-md-6">
                     <div className="row">

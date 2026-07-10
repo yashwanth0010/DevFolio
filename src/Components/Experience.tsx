@@ -184,7 +184,7 @@ function CompanyCard({ company }: { company: Company }) {
                             {/* Initials mark */}
                             <div className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#111119] ring-1 ring-white/8">
                                 <span className="bg-linear-to-br from-purple-300 to-cyan-300 bg-clip-text text-lg font-bold text-transparent">
-                                    {initials}
+                                    <img src={company.logo ?? initials} alt={initials} className="h-full w-full" />
                                 </span>
                                 <span className="absolute -inset-0.5 -z-10 rounded-2xl bg-linear-to-br from-purple-500/30 to-cyan-500/30 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100" />
                             </div>
