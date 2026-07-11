@@ -36,4 +36,10 @@ export type Education = {
     finishedYear: number;
 }
 
+export type Achievement = {
+  title: string;
+  description: string;
+  certificateUrl?: string;
+};
+
 export type Pos = { dx: number; dy: number; w: number; h: number };
