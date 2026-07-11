@@ -54,7 +54,7 @@ export default function Experience() {
             />
 
             {/* Floating background accents — deep and low-opacity */}
-            <div className="pointer-events-none absolute inset-0 overflow-hidden">
+            {/* <div className="pointer-events-none absolute inset-0 overflow-hidden">
                 <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-purple-700/10 blur-3xl animate-blob" />
                 <div className="absolute top-1/2 -right-20 h-96 w-96 rounded-full bg-cyan-600/6 blur-3xl animate-blob [animation-delay:3s]" />
                 <div className="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-fuchsia-700/6 blur-3xl animate-blob [animation-delay:6s]" />
@@ -71,7 +71,7 @@ export default function Experience() {
                         }}
                     />
                 ))}
-            </div>
+            </div> */}
 
             <div ref={containerRef} className="relative mx-auto max-w-6xl">
                 {/* Header */}

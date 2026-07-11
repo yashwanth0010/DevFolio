@@ -7,7 +7,7 @@ function Header() {
       <header id="header" className="fixed-top">
         <div className="container d-flex align-items-center justify-content-between">
           <h1 className="logo">
-            <a href="">Portfolio</a>
+            <a href="">Welcome!</a>
           </h1>
 
           <nav id="navbar" className="navbar">

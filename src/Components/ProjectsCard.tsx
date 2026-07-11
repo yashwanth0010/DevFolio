@@ -127,7 +127,7 @@ function ProjectCard({
         transform: `perspective(1000px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)`,
         transition: "transform 200ms ease-out",
       }}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-[#0a0a0e] p-6 transition-colors duration-300 ${accent.ring}`}
+      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/6 bg-[#0a0a0e] p-6 transition-colors duration-300 ${accent.ring}`}
     >
       {/* Radial hover glow */}
       <div
@@ -211,7 +211,7 @@ function IconButton({
       aria-label={label}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex h-7 w-7 items-center justify-center rounded-lg border border-white/[0.06] bg-black/40 text-white/50 transition-all hover:border-purple-400/40 hover:text-purple-200 hover:scale-110"
+      className="flex h-7 w-7 items-center justify-center rounded-lg border border-white/6 bg-black/40 text-white/50 transition-all hover:border-purple-400/40 hover:text-purple-200 hover:scale-110"
     >
       {children}
     </a>
