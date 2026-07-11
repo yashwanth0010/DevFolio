@@ -20,7 +20,20 @@ export type Project = {
     category: string;
     description: string;
     stack: string[];
-    liveUrl?: string ;
-    repoUrl?: string ;
+    liveUrl?: string;
+    repoUrl?: string;
     accent: string;
 };
+
+export type Education = {
+    id: number;
+    img: string;
+    inst: string;
+    edu: string;
+    cgpa: number;
+    branch?: string;
+    startingYear?: number;
+    finishedYear: number;
+}
+
+export type Pos = { dx: number; dy: number; w: number; h: number };
