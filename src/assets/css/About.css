@@ -24,6 +24,9 @@
 .skill-mf span {
   color: #4e4e4e;
 }
+p {
+  color: white;
+}
 
 .skill-mf .progress {
   background-color: #111010;
@@ -43,13 +46,13 @@
 }
 
 .maino {
-  box-shadow: 5px 1px 10px 3px #dfd7d7;
+  box-shadow: 1px 1px 50px 1px #dfd7d7;
   display: inline-block;
   justify-content: center;
   position: relative;
   overflow: hidden;
   border-radius: 30px;
-}
+} 
 
 .maino:hover {
   transition: all 1s ease-in-out;
