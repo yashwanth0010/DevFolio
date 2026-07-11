@@ -29,6 +29,9 @@ function Header() {
                 <Link to="projects" smooth={true} duration={100}>Projects</Link>
               </li>
               <li>
+                <Link to="skills" smooth={true} duration={100}>Skills</Link>
+              </li>
+              <li>
                 <Link to="achievements" smooth={true} duration={100}>Achievements</Link>
               </li>
               <li>
