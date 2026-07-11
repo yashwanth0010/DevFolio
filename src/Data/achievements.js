@@ -1,4 +1,4 @@
-export const achievements = [
+export const AchievementsData = [
     {
         Title: "AWS Certified Cloud Practitioner (CLF-C02)",
         Description: "Demonstrated a strong understanding of core AWS services, cloud architecture, shared responsibility model, security best practices, pricing models, and cloud economics.",

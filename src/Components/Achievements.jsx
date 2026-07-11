@@ -1,5 +1,5 @@
 import '../Assets/css/Achievements.css';
-import { achievements } from '../Data/achievements';
+import { AchievementsData as achievements } from '../Data/achievements';
 import { Shapes } from './Shapes';
 
 function Achievements() {

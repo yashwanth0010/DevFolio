@@ -10,12 +10,13 @@ import About from './Components/About';
 import Education from './Components/Education.jsx';
 import Achievements from './Components/Achievements';
 import TestComp from './Components/TestComp.jsx';
+import Experience from './Components/Experience.js';
 
 function App() {
 
   return (
     <>
-     <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route
             path="/"
@@ -24,6 +25,8 @@ function App() {
                 <Header />
                 <Hero />
                 <About />
+                <Experience />
+                {/* <TestComp /> */}
                 <Education />
                 <Projects />
                 <Achievements />
