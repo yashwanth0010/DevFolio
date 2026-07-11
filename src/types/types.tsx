@@ -43,3 +43,10 @@ export type Achievement = {
 };
 
 export type Pos = { dx: number; dy: number; w: number; h: number };
+
+export type Skill = {
+    name: string;
+    slug?: string; 
+    color?: string;
+    localImgUrl?: string;
+};
