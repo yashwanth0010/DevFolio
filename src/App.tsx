@@ -7,10 +7,11 @@ import Projects from './Components/Projects.jsx';
 import Error404 from './Components/Error.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from './Components/About';
-import Education from './Components/Education.jsx';
+import { Education } from './Components/Education';
 import Achievements from './Components/Achievements';
-import TestComp from './Components/TestComp.jsx';
+import TestComp from './Components/TestComp';
 import Experience from './Components/Experience.js';
+import Skills from './Components/Skills';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
                 {/* <TestComp /> */}
                 <Education />
                 <Projects />
+                <Skills />
                 <Achievements />
                 <Contact />
               </>
