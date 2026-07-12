@@ -15,7 +15,7 @@ export const skillsData = [
   { name: 'Terraform', slug: 'terraform' },
   { name: 'Copilot', slug: 'githubcopilot', color: 'ffffff' },
   { name: 'Claude', slug: 'claudecode' },
-  { name: 'C#', localImgUrl: '../../public/imgs/Csharp.png' },
-  { name: 'AWS', localImgUrl: '../../public/imgs/aws.png' },
-  { name: 'SQL', localImgUrl: '../../public/imgs/sql.png' },
+  { name: 'C#', localImgUrl: '/imgs/Csharp.png' },
+  { name: 'AWS', localImgUrl: '/imgs/aws.png' },
+  { name: 'SQL', localImgUrl: '/imgs/sql.png' },
 ];

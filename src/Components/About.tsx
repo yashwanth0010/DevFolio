@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "../Assets/css/About.css";
 import resume from "../assets/latest.pdf";
 import { Document, Page, pdfjs } from "react-pdf";
+import { Shapes } from "./Shapes";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function About() {
@@ -137,6 +138,7 @@ function About() {
                             Through my academic endeavors and hands-on projects, I've honed my skills in Data Structures, Problem Solving, Software design, Version Control, Team collaboration.  I believe in the power of collaboration, and my experiences in team environments have taught me the importance of diverse perspectives and effective communication.
                           </p>
                         </div>
+                        <Shapes shapesCount={50} />
                       </div>
                     </div>
                   </div>

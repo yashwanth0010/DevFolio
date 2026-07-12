@@ -54,10 +54,10 @@ export function Education() {
       />
 
       {/* Floating background */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      {/* <div className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -left-20 h-72 w-72 rounded-full bg-purple-700/10 blur-3xl animate-blob" />
-        <div className="absolute top-1/2 right-1/4 h-96 w-96 rounded-full bg-cyan-600/[0.06] blur-3xl animate-blob [animation-delay:3s]" />
-        <div className="absolute bottom-0 left-1/2 h-64 w-64 rounded-full bg-fuchsia-700/[0.06] blur-3xl animate-blob [animation-delay:6s]" />
+        <div className="absolute top-1/2 right-1/4 h-96 w-96 rounded-full bg-cyan-600/6 blur-3xl animate-blob [animation-delay:3s]" />
+        <div className="absolute bottom-0 left-1/2 h-64 w-64 rounded-full bg-fuchsia-700/6 blur-3xl animate-blob [animation-delay:6s]" />
         {[...Array(12)].map((_, i) => (
           <span
             key={i}
@@ -70,7 +70,7 @@ export function Education() {
             }}
           />
         ))}
-      </div>
+      </div> */}
 
       <div className="relative mx-auto max-w-6xl">
         {/* Row of cards. auto-fit fits N cards on any adequately wide screen,

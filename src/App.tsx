@@ -2,7 +2,6 @@ import './App.css'
 import Contact from './Components/Contact.jsx';
 import Header from './Components/Header.jsx';
 import Hero from './Components/Hero.jsx';
-import ProjectDetails from './Components/ProjectDetails.jsx';
 import Projects from './Components/Projects.jsx';
 import Error404 from './Components/Error.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -27,7 +26,6 @@ function App() {
                 <Hero />
                 <About />
                 <Experience />
-                {/* <TestComp /> */}
                 <Education />
                 <Projects />
                 <Skills />
@@ -36,7 +34,6 @@ function App() {
               </>
             }
           />
-          <Route path="projects/:id" element={<ProjectDetails />} />
           <Route path="/testComp" element={<TestComp />} />
           <Route path="*" element={<Error404 />} />
         </Routes>

@@ -60,10 +60,10 @@ export function EducationCard({
     });
   };
 
-  const stagger = index * 0.14;
-  const duration = 2.5;
+  const stagger = index * 0.2;
+  const duration = 2;
   // Content should appear after the line has fully expanded into the card.
-  const contentDelay = stagger + duration * 0.88;
+  const contentDelay = stagger + duration * 0.1;
 
   return (
     <div
@@ -98,7 +98,7 @@ export function EducationCard({
                   "rgb(168, 85, 247)",
                   "rgb(168, 85, 247)",
                   "rgb(168, 85, 247)",
-                  "rgb(10, 10, 14)",
+                  "rgb(0, 0, 0)",
                 ],
                 boxShadow: [
                   "0 0 24px rgba(168, 85, 247, 0.5)",

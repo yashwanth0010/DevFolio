@@ -1,35 +1,41 @@
-import React, { useState } from 'react';
+import { useState, type FormEvent, type TransitionEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import EmailNotification from './EmailNotification';
 
 const Contact = () => {
   const [notification, setNotification] = useState({ show: false, success: false, fading: false });
   const VISIBLE_MS = 3000; // time before starting fade
-  const FADE_MS = 500; // should match Tailwind duration-500
 
-  const handleNotificationTransitionEnd = (e) => {
+  const handleNotificationTransitionEnd = (e: TransitionEvent<HTMLDivElement>) => {
     // hide when opacity transition finishes and we're in fading state
     if (e.propertyName === 'opacity' && notification.fading) {
       setNotification({ show: false, success: false, fading: false });
     }
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const serviceId = import.meta.env.VITE_Email_Service_Id;
     const templateId = import.meta.env.VITE_Email_Template_Id;
     const publicKey = import.meta.env.VITE_Email_Public_Key;
-    const form = document.getElementsByTagName('form');
+    const form = document.querySelector<HTMLFormElement>('form');
+
+    if (!serviceId || !templateId || !publicKey || !form) {
+      setNotification({ show: true, success: false, fading: false });
+      setTimeout(() => setNotification((s) => ({ ...s, fading: true })), VISIBLE_MS);
+      return;
+    }
 
     // Initialize EmailJS with the public key
     emailjs.init(publicKey);
-    emailjs.sendForm(serviceId, templateId, form['0']).then(
+    emailjs.sendForm(serviceId, templateId, form).then(
       (result) => {
         setNotification({ show: true, success: true, fading: false });
         setTimeout(() => setNotification((s) => ({ ...s, fading: true })), VISIBLE_MS);
+        return result;
       },
       (error) => {
-        console.log(error.text);
+        console.log(error);
         setNotification({ show: true, success: false, fading: false });
         setTimeout(() => setNotification((s) => ({ ...s, fading: true })), VISIBLE_MS);
       },
@@ -62,7 +68,7 @@ const Contact = () => {
               <div className="contact-mf">
                 <div
                   id="contact"
-                  className="box-shadow-full"
+                  className="box-shadow-full bg-black"
                   style={{ borderRadius: '5rem' }}>
                   <div className="row">
                     <div className="col-md-6">
@@ -118,7 +124,7 @@ const Contact = () => {
                                   id="message"
                                   className="form-control"
                                   name="message"
-                                  rows="5"
+                                  rows={8}
                                   placeholder="Message"
                                   required></textarea>
                               </div>
