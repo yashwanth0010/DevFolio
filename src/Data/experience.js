@@ -6,34 +6,34 @@ export const ExperienceData = [
     location: 'Hybrid',
     logo: '../imgs/deloitte.png',
     summary:
-      'Working across the design system, dashboard, and marketing surfaces. Ownership of the component library and the customer-facing analytics UI.',
+      'Working across cross-functional teams to deliver impactful, high-quality solutions that solve business problems and drive meaningful outcomes.',
     projects: [
       {
-        name: 'Customer Analytics Dashboard',
+        name: 'DAS IPP',
         description:
-          'Rebuilt the analytics dashboard from scratch. Introduced virtualized tables, streamed responses, and a new chart primitive used by 40k+ monthly users. Cut initial load from 4.2s to 1.6s.',
+          'Developed and maintained multiple responsive web pages using ReactJS, contributing to an enhanced and consistent user experience. Integrated RESTful APIs to display real-time data on the user interface, ensuring seamless communication between frontend and backend systems.',
         stack: [
-          'React',
+          'ReactJS',
           'TypeScript',
           'TanStack Query',
-          'Recharts',
+          'Zustand',
           'Tailwind',
+          'Copilot',
+          'Claude',
         ],
-        link: '#',
       },
       {
-        name: 'Design System v2',
+        name: 'WALMART',
         description:
-          'Migrated 60+ components to a token-driven system with dark-mode parity, tree-shakeable exports, and typed variant APIs. Adopted across three product teams.',
-        stack: ['React', 'Radix', 'CVA', 'Storybook'],
-        link: '#',
+          'Worked with AWS cloud services, including IAM, EC2, S3, CloudWatch, and VPC, to monitor and manage cloud-based applications. Monitored application performance and infrastructure health using Dynatrace, proactively identifying and resolving potential issues.',
+        stack: ['DevOps', 'Docker', 'AWS', 'S3', 'Dynatrace', 'BackOffice','Incident response'],
       },
       {
-        name: 'Marketing Site Rewrite',
+        name: "Employee Enablement",
         description:
-          'Led the rewrite of the public marketing site. Perfect Lighthouse scores, content-driven MDX pipeline, and animation system built on Framer Motion.',
-        stack: ['Next.js', 'MDX', 'Framer Motion'],
-      },
+        "Trained new hires helping them ramp up quickly and align with team processes. Led Onboarding and induction support for new joiners, improving early team integration and readiness.",
+        stack:['New Hire Training','Leadership','Process Orientation','OnBoarding Advisor',]
+      }
     ],
   },
 ];

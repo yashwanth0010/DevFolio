@@ -4,6 +4,7 @@ import resume from "../assets/latest.pdf";
 import { Document, Page, pdfjs } from "react-pdf";
 import { Shapes } from "./Shapes";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+import { AboutData as data } from "../Data/about";
 
 function About() {
   const [visible, setVisible] = useState(false);
@@ -128,15 +129,13 @@ function About() {
                           <div className="title-box-2">
                             <h5 className="title-left">About me</h5>
                           </div>
-                          <p className="font-semibold">
-                            Hey there! I'm Yashwanth, a passionate and creative Software Developer with a love for all things tech.
-                          </p>
-                          <p className="font-semibold">
-                            In the world of 0s and 1s, I've found my playground, constantly exploring the vast landscape of software development and Machine Learning. With a toolbox filled with languages like C#, .NET Core, Javascript, ReactJS, SQL.
-                          </p>
-                          <p className="font-semibold">
-                            Through my academic endeavors and hands-on projects, I've honed my skills in Data Structures, Problem Solving, Software design, Version Control, Team collaboration.  I believe in the power of collaboration, and my experiences in team environments have taught me the importance of diverse perspectives and effective communication.
-                          </p>
+                          {
+                            data.map((para) => (
+                              <p className="font-semibold">
+                                {para.para}
+                              </p>
+                            ))
+                          }
                         </div>
                         <Shapes shapesCount={50} />
                       </div>
