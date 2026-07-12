@@ -5,10 +5,13 @@ import { Document, Page, pdfjs } from "react-pdf";
 import { Shapes } from "./Shapes";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 import { AboutData as data } from "../Data/about";
+import { isMobile } from "react-device-detect";
+
 
 function About() {
   const [visible, setVisible] = useState(false);
   const targetRef = useRef(null);
+  const doc_size = isMobile ? 350 : 500;
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -33,9 +36,9 @@ function About() {
   return (
     <>
 
-      <section id="about" className="about-mf sect-pt4 route relative pl-12 sm:pl-20 transition-all duration-3500">
+      <section id="about" className="about-mf sect-pt4 route relative transition-all duration-3500">
         <div ref={targetRef} className={[
-          "relative pl-12 sm:pl-20",
+          "relative pl-9",
           "transition-all duration-2500",
           visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
         ].join(" ")}
@@ -71,7 +74,7 @@ function About() {
                               </p>
                               <p className="font-bold">
                                 <span className="title-s">Email:</span>{" "}
-                                <span>yashwanthkumar.chamakura@gmail.com</span>
+                                <span className="breakable">yashwanthkumar.chamakura@gmail.com</span>
                               </p>
                               <p className="font-bold">
                                 <span className="title-s">Phone: </span>{" "}
@@ -99,7 +102,7 @@ function About() {
                                   pageNumber={1}
                                   renderTextLayer={false}
                                   renderAnnotationLayer={false}
-                                  height={550}
+                                  height={doc_size}
                                   className="Doc"
                                 />
                               </Document>
@@ -137,7 +140,10 @@ function About() {
                             ))
                           }
                         </div>
-                        <Shapes shapesCount={50} />
+                        {
+                          !isMobile ? <Shapes shapesCount={50} /> : <></>
+                        }
+
                       </div>
                     </div>
                   </div>
