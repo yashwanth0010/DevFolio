@@ -11,6 +11,7 @@ import Achievements from './Components/Achievements';
 import TestComp from './Components/TestComp';
 import Experience from './Components/Experience.js';
 import Skills from './Components/Skills';
+import { Footer } from './Components/Footer.js';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
                 <Skills />
                 <Achievements />
                 <Contact />
+                <Footer />
               </>
             }
           />

@@ -18,7 +18,7 @@ function Hero() {
         <div className="overlay-itro"></div>
         <div className="hero-content display-table">
           <div className="table-cell">
-            <img src='/public/imgs/about.png' alt='Image' width={500} height={500} />
+            <img src='/imgs/about.png' alt='Image' width={500} height={500} />
 
             <div className="container">
               <h1 className="hero-title mb-4">Hi!, I am Yashwanth</h1>
