@@ -98,7 +98,7 @@ export function EducationCard({
                   "rgb(168, 85, 247)",
                   "rgb(168, 85, 247)",
                   "rgb(168, 85, 247)",
-                  "rgb(10, 10, 14)",
+                  "rgb(0, 0, 0)",
                 ],
                 boxShadow: [
                   "0 0 24px rgba(168, 85, 247, 0.5)",
