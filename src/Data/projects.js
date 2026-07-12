@@ -1,32 +1,29 @@
 export const ProjectsData = [
   {
-    title: 'NeuroBoard',
-    category: 'AI . Web App',
+    title: 'Image Captioning using Deep Learning',
+    category: 'Python App',
     description:
-      'Real-time collaborative whiteboard with an on-device diffusion model for sketch-to-image. Streams strokes over WebRTC and generates previews in under 400ms.',
-    stack: ['Next.js', 'TypeScript', 'WebRTC', 'ONNX Runtime', 'Tailwind'],
-    liveUrl: '#',
-    repoUrl: '#',
-    accent: 'purple',
-  },
-  {
-    title: 'Pulse Analytics',
-    category: 'Dashboard',
-    description:
-      'Product analytics dashboard for a mid-stage SaaS. Virtualized tables, streamed queries, and a token-driven chart system. Used daily by the growth team.',
-    stack: ['React', 'TypeScript', 'TanStack Query', 'Recharts'],
-    liveUrl: '#',
-    repoUrl: '#',
+      'An image captioning system using state-of-the-art deep learning techniques, including Convolutional Neural Networks (CNNs) and Recurrent Neural Networks (RNNs). Trained the model on Flicker Dataset comprising high-resolution images paired with corresponding descriptions',
+    stack: ['Deep Learning', 'Python', 'Tensorflow', 'CUDA', 'Keras', 'Pillow'],
+    repoUrl: 'https://github.com/yashwanth0010/Image_Caption_Generator',
     accent: 'cyan',
   },
   {
-    title: 'Verse',
-    category: 'Mobile · iOS',
+    title: 'Automatic Number Plate Recognition',
+    category: 'OCR App',
     description:
-      "Minimalist journaling app with voice transcription, mood tracking, and end-to-end encrypted sync. Featured in the App Store's productivity picks.",
-    stack: ['React Native', 'Expo', 'Whisper', 'SQLite'],
-    liveUrl: '#',
-    repoUrl: '#',
+      'An application capable of text recognition from provided images of number plates. Maintains an up-to-date Excel spreadsheet containing vehicle numbers, states, and timestamps',
+    stack: ['Python', 'Image Processing', 'OpenCV', 'Docker', 'TKinter'],
+    repoUrl: 'https://github.com/yashwanth0010/ANPR',
+    accent: 'purple',
+  },
+  {
+    title: 'DWiz',
+    category: 'Web App',
+    description:
+      'Web application for data visualization leveraging R programming language. Utilizing the most powerful visualization package Ggplot to create compelling data visualizations.Built the web interface with ShinyR, employing CSS and Bootstrap for enhanced design and functionality',
+    stack: ['R', 'Ggplot', 'Tidyverse', 'ShinyR', 'Shinyapps Cloud'],
+    repoUrl: 'https://github.com/yashwanth0010/DWiz',
     accent: 'fuchsia',
   },
 ];

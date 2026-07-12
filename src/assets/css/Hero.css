@@ -6,7 +6,38 @@
 
 .hero .hero-content {
   text-align: center;
-  position: absolute;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* layout: place image and text side-by-side */
+.hero .table-cell {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hero .table-cell img {
+  max-width: 40%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .hero .table-cell {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .hero .table-cell img {
+    max-width: 800%;
+  }
 }
 
 .hero .overlay-itro {
