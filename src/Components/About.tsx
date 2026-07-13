@@ -91,7 +91,7 @@ function About() {
                               <p style={{ textAlign: "center" }}>Resume</p>
                             </b>{" "}
                           </strong>
-                          <div className="resume">
+                          <div className="resume pl-4 md:pl-0">
                             <a
                               className="maino"
                               href={resume}

@@ -1,5 +1,5 @@
 .about-mf .box-shadow-full {
-  padding-top: 4rem;
+  padding-top: 0rem;
   padding-bottom: 4rem;
   background-color: #0a0a0e;
   border-radius: 2rem;
@@ -12,6 +12,12 @@
 
 .about-mf .about-img img {
   margin-left: 10px;
+}
+
+@media (min-width: 1024px){
+  .about-mf .box-shadow-full{
+    padding-top: 4rem;
+  }
 }
 
 @media (min-width: 767px) {
