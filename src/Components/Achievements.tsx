@@ -17,7 +17,7 @@ function Achievements() {
             </div>
           </div>
         </div>
-        <div className="achievecard">
+        <div className="achievecard pl-8">
           <div className="row justify-center">
             <ol className="divide-y divide-white/6">
               {achievements.map((a, i) => (

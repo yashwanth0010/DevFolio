@@ -1,5 +1,6 @@
 import '../Assets/css/Hero.css';
 import { Typewriter, Cursor } from 'react-simple-typewriter'
+import { isMobile } from "react-device-detect";
 
 function Hero() {
 
@@ -18,7 +19,10 @@ function Hero() {
         <div className="overlay-itro"></div>
         <div className="hero-content display-table">
           <div className="table-cell">
-            <img src='/imgs/about.png' alt='Image' width={500} height={500} />
+          {
+            isMobile? <img src='/imgs/about.png' alt='Image' width={250} height={250} /> : <img src='/imgs/about.png' alt='Image' width={500} height={500} />
+          }
+            
 
             <div className="container">
               <h1 className="hero-title mb-4">Hi!, I am Yashwanth</h1>

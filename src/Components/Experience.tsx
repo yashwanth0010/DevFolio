@@ -98,7 +98,7 @@ export default function Experience() {
                                     key={idx}
                                     data-idx={idx}
                                     className={[
-                                        "relative pl-12 sm:pl-20",
+                                        "relative pl-2 sm:pl-20",
                                         "transition-all duration-3500",
                                         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8",
                                     ].join(" ")}
@@ -197,7 +197,7 @@ function CompanyCard({ company }: { company: Company }) {
                         </div>
 
                         <div className="flex flex-col sm:items-end text-xs font-normal">
-                            <span className="rounded-full border border-white/6 bg-black/40 px-3 py-1">
+                            <span className="rounded-full border border-white/6 bg-black/40 px-3 py-1 w-2/3 md:w-full ">
                                 {company.period}
                             </span>
                             {company.location && (
