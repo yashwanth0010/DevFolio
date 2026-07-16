@@ -1,9 +1,11 @@
 import { useState, type FormEvent, type TransitionEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import EmailNotification from './EmailNotification';
+import { LoadingSpinner } from './LoadingSpinner';
 
 const Contact = () => {
   const [notification, setNotification] = useState({ show: false, success: false, fading: false });
+  const [isLoading, setIsLoading] = useState(false);
   const VISIBLE_MS = 3000; // time before starting fade
 
   const handleNotificationTransitionEnd = (e: TransitionEvent<HTMLDivElement>) => {
@@ -18,9 +20,12 @@ const Contact = () => {
     const serviceId = import.meta.env.VITE_Email_Service_Id;
     const templateId = import.meta.env.VITE_Email_Template_Id;
     const publicKey = import.meta.env.VITE_Email_Public_Key;
-    const form = document.querySelector<HTMLFormElement>('form');
+    const form = e.currentTarget;
+
+    setIsLoading(true);
 
     if (!serviceId || !templateId || !publicKey || !form) {
+      setIsLoading(false);
       setNotification({ show: true, success: false, fading: false });
       setTimeout(() => setNotification((s) => ({ ...s, fading: true })), VISIBLE_MS);
       return;
@@ -29,18 +34,18 @@ const Contact = () => {
     // Initialize EmailJS with the public key
     emailjs.init(publicKey);
     emailjs.sendForm(serviceId, templateId, form).then(
-      (result) => {
+      () => {
         setNotification({ show: true, success: true, fading: false });
+        setIsLoading(false);
         setTimeout(() => setNotification((s) => ({ ...s, fading: true })), VISIBLE_MS);
-        return result;
       },
       (error) => {
         console.log(error);
         setNotification({ show: true, success: false, fading: false });
+        setIsLoading(false);
         setTimeout(() => setNotification((s) => ({ ...s, fading: true })), VISIBLE_MS);
       },
     );
-
   };
 
   return (
@@ -54,6 +59,17 @@ const Contact = () => {
               onTransitionEnd={handleNotificationTransitionEnd}
             >
               <EmailNotification success={notification.success} />
+            </div>
+          </div>
+        </>
+      )}
+
+      {isLoading && (
+        <>
+          <div className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40" />
+          <div className="fixed inset-0 flex items-center justify-center z-50 pointer-events-none">
+            <div className="pointer-events-auto rounded-2xl bg-white/90 p-6 shadow-xl dark:bg-slate-900/90">
+              <LoadingSpinner />
             </div>
           </div>
         </>
@@ -137,8 +153,9 @@ const Contact = () => {
                             <div className="col-md-12 text-center">
                               <button
                                 type="submit"
-                                className="button button-a button-big button-rouded">
-                                Send Message
+                                disabled={isLoading}
+                                className="button button-a button-big button-rouded disabled:cursor-not-allowed disabled:opacity-70">
+                                {isLoading ? <LoadingSpinner /> : 'Send Message'}
                               </button>
                             </div>
                           </div>

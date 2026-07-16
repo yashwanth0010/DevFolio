@@ -20,7 +20,7 @@ function Hero() {
         <div className="hero-content display-table">
           <div className="table-cell">
           {
-            isMobile? <img src='/imgs/about.png' alt='Image' width={250} height={250} /> : <img src='/imgs/about.png' alt='Image' width={500} height={500} />
+            isMobile? <img src='/imgs/about.png' alt='Image' width={250} height={250} /> : <img src='/imgs/about.png' alt='Image' width={350} height={350} />
           }
             
 

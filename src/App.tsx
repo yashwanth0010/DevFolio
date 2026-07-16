@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import About from './Components/About';
 import { Education } from './Components/Education';
 import Achievements from './Components/Achievements';
-import TestComp from './Components/TestComp';
+import { TestComp } from './Components/TestComp';
 import Experience from './Components/Experience.js';
 import Skills from './Components/Skills';
 import { Footer } from './Components/Footer.js';
