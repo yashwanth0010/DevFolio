@@ -6,6 +6,13 @@ export const AchievementsData = [
     certificateUrl:
       'https://drive.google.com/file/d/1DU_adS2rsaSWCyK_4-kKeh4IsY9YpryW/view?usp=sharing',
   },
+   {
+    title: 'Claude Certified Associate',
+    description:
+      'Demonstrated understanding of Claude AI, generative AI, prompt engineering, responsible AI, and effective use of Claude for productivity and problem-solving.',
+    certificateUrl:
+      'https://drive.google.com/file/d/1VbF1gPocnNh-Ad78fQYuRxBXdsSprUEa/view',
+  },
   {
     title: 'Google/Data Analytics Professional Certificate',
     description:
